@@ -13,13 +13,17 @@
         zjištění obsahu.</p>
     <div class="button-container">
         <button class="button is-primary" onclick="redirect_demo()" style="z-index: 9999">Funkční demo</button>
-        <button class="button is-success is-dark align" style="z-index: 9999">Co je End to End encryption</button>
+        <button class="button is-success is-dark align" style="z-index: 9999" onclick="redirect_explain()">Co je End to End encryption</button>
     </div>
 </div>
 <script>
     function redirect_demo(){
         window.location.href = "demo.html";
     }
+    function redirect_explain(){
+        window.location.href = "e2ee_princip.html";
+    }
+
 </script>
 </body>
 </html>
