@@ -1,0 +1,186 @@
+body {
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+    background-color: #090947;
+    background-image: linear-gradient(315deg, #10109a 0%, #012842 74%);
+    background-size: cover;
+    backdrop-filter: blur(10px);
+    min-height: 100vh; /* Ensure body covers at least the full height of the viewport */
+}
+.main-text{
+    padding: 20px;
+}
+.sub-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.animation-element {
+    max-height: 150px;
+    width: fit-content;
+    align-content: center;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Allow flex items to wrap */
+    width: 100%;
+}
+#enc_message, #second_enc_message{
+    max-width: 150px;
+    width: 300px;
+    height: fit-content;
+    font-size: large;
+;
+}
+.scale-down-bottom{
+    opacity: 1;
+}
+.scale-up-bottom{
+    opacity: 0;
+}
+.scale-down-bottom.active {
+    animation: scale-down-bottom 2s cubic-bezier(0.36, 0, 0.66, -0.56) forwards;
+}
+.scale-up-bottom.active {
+    opacity: 1;
+    animation: scale-up-bottom 5s linear forwards;
+    animation-fill-mode: both;
+}
+.move2-message{
+    opacity: 0;
+}
+.move2-message.active{
+    opacity: 1;
+    animation: move-second-message 5s linear forwards;
+    animation-fill-mode: both;
+}
+.scale-second-message.active{
+}
+@keyframes move-second-message {
+    0%{
+        opacity: 0;
+        transform: translateX(-150%);
+    }
+    5%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateY(0) scale(1);
+        transform-origin: 50% 100%;
+    }
+    100% {
+        transform: translateY(-200px) scale(0);
+        transform-origin: 50% 100%;
+
+    }
+
+}
+.hidden.active{
+    opacity: 0;
+}
+@keyframes scale-down-bottom {
+    0% {
+        transform: translateY(0) scale(1);
+        transform-origin: 50% 100%;
+    }
+    100% {
+        transform: translateY(200px) scale(0);
+        transform-origin: 50% 100%;
+
+    }
+}
+@keyframes scale-up-bottom {
+    0% {
+        transform: translateY(-200px) scale(0);
+        transform-origin: 50% 100%;
+    }
+    50% {
+        transform: translateY(0) scale(1);
+        transform-origin: 50% 100%;
+
+    }
+    50%{
+        transform: translateX(0);
+        transform-origin: 50% 100%;
+    }
+    95%{
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(150%) scale(1);
+    }
+}
+.scale-up-second{
+    opacity: 0;
+}
+.scale-up-second.active{
+    opacity: 1;
+    animation: scale-up-second 2s cubic-bezier(0.36, 0, 0.66, -0.56) forwards;
+}
+@keyframes scale-up-second {
+    0% {
+        opacity: 0;
+        transform: translateY(200px) scale(0);
+        transform-origin: 50% 100%;
+    }
+    10%{
+        scale: 1;
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        transform-origin: 50% 100%;
+
+    }
+}
+
+.icon-container {
+    position: relative;
+}
+.icon-container.active {
+    position: relative;
+    animation: shake 0.5s ease-out alternate;
+    animation-iteration-count: 10;
+}
+.icon-container1 {
+    position: relative;
+}
+.icon-container1.active {
+    position: relative;
+    animation: shake 0.5s ease-out alternate;
+    animation-iteration-count: 10;
+}
+.shake{
+    animation: shake 100ms ease-out infinite ;
+}
+@keyframes shake {
+    from { transform: translateX(-10px); }
+    to { transform: translateX(10px); }
+}
+
+/* Styles for the flying letters */
+.letter {
+    position: absolute;
+    color: whitesmoke;
+    font-size: 30px;
+    animation: fly 2s linear;
+    opacity: 1;
+}
+
+/* Animation for the flying effect */
+@keyframes fly {
+    0% { opacity: 1; }
+    100% { opacity: 0; transform: translate(-50%, -50%) translateX(calc(200px * cos(var(--angle)))) translateY(calc(200px * sin(var(--angle)))) rotateZ(180deg); }
+}

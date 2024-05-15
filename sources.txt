@@ -1,0 +1,10 @@
+/1 volny preklad z https://www.cloudflare.com/learning/privacy/what-is-end-to-end-encryption/
+/2 citace https://cs.wikipedia.org/wiki/Transport_Layer_Security
+https://bulma.io/
+https://animista.net
+https://www.eggradients.com/gradient/visible-village
+https://chatgpt.com
+/3 citace https://privacycenter.instagram.com/policy/?section_id=18.3-ComplianceWithALegal
+/4 volna inspirace https://privacycenter.instagram.com/policy/?section_id=1-WhatInformationDoWe
+/5 citace https://www.policie.cz/clanek/kyberkriminalita.aspx
+/6 citace https://tsf.telegram.org/manuals/e2ee-simple

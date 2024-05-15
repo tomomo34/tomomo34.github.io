@@ -1,0 +1,71 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+html{
+    overflow: hidden;
+}
+body {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    height: 100vh; /* Set height to 100% of viewport height */
+    background: linear-gradient(to right, #051e38 0%, #0d4f4a 19%, #3a3e0c 40%, #4f3909 60%, #3e0e2c 83%, #051e38 100%);
+    background-size: 10000px 100%;
+    animation: bg 15s linear infinite;
+    font-size: 1000px;
+    color: transparent;
+    backdrop-filter: blur(10px);
+}
+
+body head{
+    display: block;
+    font-size: 52px;
+    color: transparent;
+}
+h1 {
+    font-size: 3vmin;
+    text-align: center;
+    scale: 2;
+    animation: text_pop 0.6s both;
+    margin-bottom: 20px; /* Add some spacing between h1 and p */
+}
+
+.align {
+    font-size: 40px;
+    text-align: center;
+    width: 60%; /* Adjust width to your preference */
+    overflow: visible;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    margin: 0 25px; /* Add some space between buttons */
+    font-size: 25px;
+}
+@keyframes bg {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: 10000px;
+    }
+}
+@keyframes text_pop {
+    0% {
+        text-shadow: 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555;
+        transform: translateX(0) translateY(0);
+    }
+    100% {
+        text-shadow: -1px 1px #555555, -2px 2px #555555, -3px 3px #555555, -4px 4px #555555, -5px 5px #555555, -6px 6px #555555, -7px 7px #555555, -8px 8px #555555;
+        transform: translateX(8px) translateY(-8px);
+    }
+}
+
