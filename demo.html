@@ -10,12 +10,14 @@
     <title>Live Demo</title>
 </head>
 <body>
-<nav class="navbar">
+<nav class="navbar is-success">
     <a href="index.html">
-        <img style="width: 48px; height: 48px" src="https://cdn.iconscout.com/icon/premium/png-256-thumb/html-2752158-2284975.png?f=webp" alt="HTML Icon">
+        <img style="width: 48px; height: 48px" src="/images/icon.ico" alt="Icon">
     </a>
-    <a class="navbar-item" target="_blank" rel="noopener noreferrer" href="index.html">Demo</a>
+    <a class="navbar-item" target="_blank" rel="noopener noreferrer" href="demo.html">Demo</a>
     <a class="navbar-item" target="_blank" rel="noopener noreferrer" href="./e2ee_princip.html">Jak tohle funguje</a>
+    <a class="navbar-item" target="_blank" rel="noopener noreferrer" href="./index.html">Redirect</a>
+    <a class="navbar-item" target="_blank" rel="noopener noreferrer" href="./index.html">Redirect</a>
 </nav>
 <div class="flex-container" style="padding: 10px">
     <div class="sub-box">
@@ -50,8 +52,7 @@
         <p style="font-size: 1.2rem">This is the public key</p>
         <div class="text" style="text-align: justify; max-width: 275px; height: 64px; overflow: hidden; font-size: 0.8rem"></div>
         <img src="images/server-icon.svg" style="opacity: 60%; scale: 0.5">
-        <h1 class="title is-1">Server</h1>
-        <button class="button is-warning is-dark" style="font-size: larger; z-index: 9999;" onclick="resetAnimations()">Reset Animations</button>
+        <h1 class="title is-1" style="padding-bottom: 5px">Server</h1>
     </div>
     <div class="sub-box">
         <div id="dec_message" class="notification is-danger column animation-element scale-up-second">
@@ -68,6 +69,7 @@
         <div id="second_enc_message" class="notification is-link column animation-element move2-message">
             Placeholder
         </div>
+        <button class="button is-warning is-dark" style="font-size: larger; z-index: 9999;" onclick="resetAnimations()">Reset Animations</button>
     </div>
 </div>
 <script>
@@ -196,20 +198,6 @@
         console.log("Encrypted message:" + encryptedMessage);
         return decryptedPartySays;
     }
-</script>
-<script>
-    function setupNodeEvents(on) {
-        on('before:browser:launch', (browser, launchOptions) => {
-            if (browser.family === 'firefox') {
-                // launchOptions.preferences is a map of preference names to values
-                // login is not working in firefox when testing_localhost_is_secure_when_hijacked is false
-                launchOptions.preferences['network.proxy.testing_localhost_is_secure_when_hijacked'] = true;
-            }
-
-            return launchOptions;
-        });
-    }
-    setupNodeEvents();
 </script>
 <script>
     let is_running = false
