@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+    <link rel="stylesheet" href="styles_for_backend.css">
+    <link rel="icon" type="image/x-icon" href="/images/icon.ico">
+    <link href="./code/prism.css" rel="stylesheet" />
+    <script src="./code/prism.js"></script>
+    <title>E2EE</title>
+</head>
+<body>
+<pre class="code"><code class="language-javascript">
+    import { E2EE } from "https://esm.sh/e2ee.js";
+    var PublicKey = ""
+    window.encrypt = async function encrypt(message) {
+        const party = new E2EE();
+        await party.generateKeyPair();
+        const partyPublicKey = await party.exportPublicKey();
+        await party.setRemotePublicKey(partyPublicKey);
+        const partySays = message;
+        const encryptedPartySays = await party.encrypt(partySays);
+        PublicKey = partyPublicKey;
+        window. public_key = PublicKey;
+        console.log("This is the public key:"+ partyPublicKey);
+        scrambleText('.text', [
+            'This is the public key',
+            partyPublicKey,
+        ]);
+        return { encryptedMessage: encryptedPartySays, partyInstance: party };
+    }
+    </code></pre>
+
+</body>
+</html>
+

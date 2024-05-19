@@ -10,7 +10,7 @@
     <title>Live Demo</title>
 </head>
 <body>
-<nav class="navbar is-success">
+<nav class="navbar is-black">
     <a href="index.html">
         <img style="width: 48px; height: 48px" src="/images/icon.ico" alt="Icon">
     </a>
@@ -69,6 +69,7 @@
         <div id="second_enc_message" class="notification is-link column animation-element move2-message">
             Placeholder
         </div>
+        <button class="button is-success is-dark" style="font-size: larger; z-index: 9999;" id="start_anim">Start Animations</button>
         <button class="button is-warning is-dark" style="font-size: larger; z-index: 9999;" onclick="resetAnimations()">Reset Animations</button>
     </div>
 </div>
@@ -152,25 +153,34 @@
         document.getElementById('outputDiv').classList.remove('active');
         document.getElementById('outputDiv').classList.remove('hidden');
     }
+    function validateInput() {
+        var inputField = document.getElementById("textInput");
+        var inputValue = inputField.value.trim(); // Trim whitespace from input
+        if (inputValue !== "") {
+            startAnimations();
+        } else {
+            // If input is empty, run the shake animation
+            inputField.classList.add("shake");
+            // Remove the shake class after the animation completes
+            setTimeout(() => {
+                inputField.classList.remove("shake");
+            }, 300); // Adjust timing as needed
+        }
+    }
     document.getElementById("textInput").addEventListener("keypress", function(event) {
         if (event.key === "Enter") {
             // Prevent default form submission behavior
             event.preventDefault();
-            // Execute action only if input is not empty
-            var inputValue = this.value.trim(); // Trim whitespace from input
-            if (inputValue !== "") {
-                startAnimations();
-            }
-            else {
-                // If input is empty, run the shake animation
-                this.classList.add("shake");
-                // Remove the shake class after the animation completes
-                setTimeout(() => {
-                    this.classList.remove("shake");
-                }, 300); // Adjust timing as needed
-            }
+            validateInput();
         }
     });
+    document.getElementById("start_anim").addEventListener("click", function() {
+        validateInput();
+    });
+    function startAnimations() {
+        // Your animation code here
+        console.log("Animations started");
+    }
 </script>
 <script type="module">
     import { E2EE } from "https://esm.sh/e2ee.js";
