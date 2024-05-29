@@ -16,7 +16,7 @@
     </a>
     <a class="navbar-item" target="_blank" rel="noopener noreferrer" href="demo.html">Demo</a>
     <a class="navbar-item" target="_blank" rel="noopener noreferrer" href="./e2ee_princip.html">Jak tohle funguje</a>
-    <a class="navbar-item" target="_blank" rel="noopener noreferrer" href="./temp_princip_replace_oncommit.html">Redirect</a>
+    <a class="navbar-item" target="_blank" rel="noopener noreferrer" href="./backend_explain.html">Redirect</a>
     <a class="navbar-item" target="_blank" rel="noopener noreferrer" href="./index.html">Redirect</a>
 </nav>
 <div class="flex-container" style="padding: 10px">
@@ -155,21 +155,18 @@
     }
     function validateInput() {
         var inputField = document.getElementById("textInput");
-        var inputValue = inputField.value.trim(); // Trim whitespace from input
+        var inputValue = inputField.value.trim();
         if (inputValue !== "") {
             startAnimations();
         } else {
-            // If input is empty, run the shake animation
             inputField.classList.add("shake");
-            // Remove the shake class after the animation completes
             setTimeout(() => {
                 inputField.classList.remove("shake");
-            }, 300); // Adjust timing as needed
+            }, 300);
         }
     }
     document.getElementById("textInput").addEventListener("keypress", function(event) {
         if (event.key === "Enter") {
-            // Prevent default form submission behavior
             event.preventDefault();
             validateInput();
         }
@@ -177,10 +174,6 @@
     document.getElementById("start_anim").addEventListener("click", function() {
         validateInput();
     });
-    function startAnimations() {
-        // Your animation code here
-        console.log("Animations started");
-    }
 </script>
 <script type="module">
     import { E2EE } from "https://esm.sh/e2ee.js";

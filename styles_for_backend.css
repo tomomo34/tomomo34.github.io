@@ -1,7 +1,31 @@
-.code{
-    width: fit-content;
-    height: auto;
+body {
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+    background-color: #0d0a0b;
+    background-image: linear-gradient(315deg, #200008 0%, #001b20 74%);
+    background-size: cover;
+    backdrop-filter: blur(10px);
+    min-height: 100vh; /* Ensure body covers at least the full height of the viewport */
 }
-.language-javascript{
-    font-size: 100rem;
+.flex {
+    display: flex;
+}
+.flex > * {
+    flex: 1;
+}
+.content {
+    align-items: center;
+    max-width: 75%;
+    padding: 20px; /* Add some padding for better readability */
+}
+.code{
+    padding: 0;
+    max-width: 100%; /* Ensure the image doesn't overflow its container */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 600px;
+}
+.title_code{
+    text-align: center;
+    font-size: 1.2rem;
 }
