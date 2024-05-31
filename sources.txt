@@ -10,3 +10,4 @@ https://chatgpt.com
 /6 citace https://tsf.telegram.org/manuals/e2ee-simple
 /7 citace https://www.rascasone.com/cs/blog/co-je-javascript-pro-zacatecniky
 /8 citace infa https://radixweb.com/blog/top-javascript-usage-statistics#Usage
+/9 https://www.nytimes.com/2023/05/22/business/meta-facebook-eu-privacy-fine.html
