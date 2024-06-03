@@ -20,8 +20,11 @@ body {
     padding: 20px; /* Add some padding for better readability */
 }
 img {
-    padding: 60px;
+    padding: 0;
     max-width: 100%; /* Ensure the image doesn't overflow its container */
     height: auto; /* Maintain aspect ratio */
     max-height: 600px;
+}
+.padded{
+    padding: 60px;
 }
