@@ -14,11 +14,6 @@ body {
 .flex > * {
     flex: 1;
 }
-.content {
-    align-items: center;
-    max-width: 75%;
-    padding: 20px; /* Add some padding for better readability */
-}
 img {
     padding: 0;
     max-width: 100%; /* Ensure the image doesn't overflow its container */
@@ -28,4 +23,9 @@ img {
 
 .padded{
     padding: 60px;
+}
+.content {
+    align-items: center;
+    max-width: 75%;
+    padding: 20px; /* Add some padding for better readability */
 }
