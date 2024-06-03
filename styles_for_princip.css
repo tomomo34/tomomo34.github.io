@@ -25,6 +25,7 @@ img {
     height: auto; /* Maintain aspect ratio */
     max-height: 600px;
 }
+
 .padded{
     padding: 60px;
 }
