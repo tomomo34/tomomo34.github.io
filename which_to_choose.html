@@ -8,9 +8,18 @@
     <title>E2EE</title>
 </head>
 <body>
+<nav class="navbar is-black">
+    <a href="index.html">
+        <img style="width: 48px; height: 48px" src="/images/icon.ico" alt="Icon">
+    </a>
+    <a class="navbar-item" target="_blank" rel="noopener noreferrer" href="demo.html">Demo</a>
+    <a class="navbar-item" target="_blank" rel="noopener noreferrer" href="./e2ee_princip.html">Jak tohle funguje</a>
+    <a class="navbar-item" target="_blank" rel="noopener noreferrer" href="./backend_explain.html">Vysvětlení backendu</a>
+    <a class="navbar-item" target="_blank" rel="noopener noreferrer" href="./which_to_choose.html">Co si zvolit</a>
+</nav>
 <div class="content">
     <div class="header">
-        <h1>Centered Header Text</h1>
+        <h1>Kterou aplikaci si zvolit?</h1>
     </div>
     <div class="container">
         <div class="column img_col">
@@ -49,6 +58,25 @@
 
         </div>
     </div>
+    </div>
 </div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var notifications = document.querySelectorAll('.notification');
+        var maxHeight = 0;
+        notifications.forEach(function(notification) {
+            notification.style.height = 'auto';
+            var height = notification.offsetHeight;
+            if (height > maxHeight) {
+                maxHeight = height;
+            }
+        });
+        notifications.forEach(function(notification) {
+            notification.style.height = maxHeight + 'px';
+        });
+    });
+
+    //one of the best function handles alignment. Im sure it can be done simplier with flexboxes but I hate em
+</script>
 </body>
 </html>
