@@ -9,13 +9,13 @@
 </head>
 <body>
 <nav class="navbar is-black">
-    <a href="index.html">
+    <a href="index.html" target="_self">
         <img style="width: 48px; height: 48px" src="/images/icon.ico" alt="Icon">
     </a>
-    <a class="navbar-item" target="_blank" rel="noopener noreferrer" href="demo.html">Demo</a>
-    <a class="navbar-item" target="_blank" rel="noopener noreferrer" href="./e2ee_princip.html">Jak tohle funguje</a>
-    <a class="navbar-item" target="_blank" rel="noopener noreferrer" href="./backend_explain.html">Vysvětlení backendu</a>
-    <a class="navbar-item" target="_blank" rel="noopener noreferrer" href="./which_to_choose.html">Co si zvolit</a>
+    <a class="navbar-item" target="_self" rel="noopener noreferrer" href="demo.html">Demo</a>
+    <a class="navbar-item" target="_self" rel="noopener noreferrer" href="./e2ee_princip.html">Jak tohle funguje</a>
+    <a class="navbar-item" target="_self" rel="noopener noreferrer" href="./backend_explain.html">Vysvětlení backendu</a>
+    <a class="navbar-item" target="_self" rel="noopener noreferrer" href="./which_to_choose.html">Co si zvolit</a>
 </nav>
 <div class="content">
     <div class="header">
@@ -38,6 +38,14 @@
                 šifrování používá spousta jiných služeb
             </div>
             </div>
+            <div class="column img_col">
+                <img src="/images/whatsapp_icon.svg" alt="Image 1">
+                <h2 class="subtitle is-2">WhatsApp</h2>
+                <div class="notification is-primary">
+                    WhatsApp ačkoliv je dceříná společnost facebooku tak oteřeně používá signal E2EE a
+                    je poměrně důvěryhodný co se dat týče. Jediná problematická služba jsou cloudové zálohy.
+                </div>
+            </div>
         </div>
         <div class="column img_col">
             <h2>Co nepoužívat</h2>
@@ -55,8 +63,15 @@
                 Zde platí to samé jako pro messanger, jde o aplikaci vlastněnou společností meta. Aplikace
                 propaguje E2EE, ale mě osobně se ho nepovedlo zapnout.
             </div>
-
         </div>
+            <div class="column img_col">
+                <img src="/images/telegram_icon.svg" alt="Image 1">
+                <h2 class="subtitle is-2">Telegram</h2>
+                <div class="notification is-info">
+                    Telegram se prezentuje jako jeden z nejbezpečnějších messangerů, ale jejich jednání s policií "Vemte si co chcete a
+                    hlavně nám neubližujte" je velkým kontrastem proti ostatním službám.
+                </div>
+            </div>
     </div>
     </div>
 </div>
@@ -75,7 +90,6 @@
             notification.style.height = maxHeight + 'px';
         });
     });
-
     //one of the best function handles alignment. Im sure it can be done simplier with flexboxes but I hate em
 </script>
 </body>
