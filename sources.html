@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+    <link rel="stylesheet" href="styles_for_sources.css">
+    <link rel="icon" type="image/x-icon" href="/images/icon.ico">
+    <title>E2EE</title>
+</head>
+<body>
+<nav class="navbar is-black">
+    <a href="index.html" target="_self">
+        <img style="width: 48px; height: 48px" src="/images/icon.ico" alt="Icon">
+    </a>
+    <a class="navbar-item" target="_self" rel="noopener noreferrer" href="demo.html">Demo</a>
+    <a class="navbar-item" target="_self" rel="noopener noreferrer" href="./e2ee_princip.html">Jak tohle funguje</a>
+    <a class="navbar-item" target="_self" rel="noopener noreferrer" href="./backend_explain.html">Vysvětlení backendu</a>
+    <a class="navbar-item" target="_self" rel="noopener noreferrer" href="./which_to_choose.html">Co si zvolit</a>
+    <a class="navbar-item" target="_self" rel="noopener noreferrer" href="./sources.html">Zdroje</a>
+</nav>
+<div class="flex">
+<div class="content">
+<table class="table">
+    <thead>
+    <tr>
+        <th>Číslo odkazu</th>
+        <th>Odkaz</th>
+        <th>Typ citace</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>1</td>
+        <td><a href="https://www.cloudflare.com/learning/privacy/what-is-end-to-end-encryption/">End-to-End Encryption</a></td>
+        <td>Volny preklad z Cloudflare</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td><a href="https://cs.wikipedia.org/wiki/Transport_Layer_Security">Transport Layer Security</a></td>
+        <td>Citace z Wikipedie</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td><a href="https://privacycenter.instagram.com/policy/?section_id=18.3-ComplianceWithALegal">Instagram Privacy Policy</a></td>
+        <td>Citace z Instagramu</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td><a href="https://privacycenter.instagram.com/policy/?section_id=1-WhatInformationDoWe">What Information Do We Collect?</a></td>
+        <td>Volna inspirace z Instagramu</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td><a href="https://www.policie.cz/clanek/kyberkriminalita.aspx">Kyberkriminalita</a></td>
+        <td>Citace z Policie ČR</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td><a href="https://tsf.telegram.org/manuals/e2ee-simple">End-to-End Encryption (Telegram)</a></td>
+        <td>Citace z Telegramu</td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td><a href="https://www.rascasone.com/cs/blog/co-je-javascript-pro-zacatecniky">Co je JavaScript pro začátečníky?</a></td>
+        <td>Citace z Rascasone</td>
+    </tr>
+    <tr>
+        <td>8</td>
+        <td><a href="https://radixweb.com/blog/top-javascript-usage-statistics#Usage">JavaScript Usage Statistics</a></td>
+        <td>Citace ze statistik</td>
+    </tr>
+    <tr>
+        <td>9</td>
+        <td><a href="https://www.nytimes.com/2023/05/22/business/meta-facebook-eu-privacy-fine.html">Meta (Facebook) EU Privacy Fine</a></td>
+        <td>Článek z New York Times</td>
+    </tr>
+    <tr>
+        <td>10</td>
+        <td><a href="https://signal.org/bigbrother/">Signal Government Requests</a></td>
+        <td>Výpis komunikace mezi signálem a vládou</td>
+    </tr>
+    <tr>
+        <td>11</td>
+        <td><a href="https://youtu.be/t7HZrpJ4OyQ?si=NPtIY3_GZbnLkdOs"> Telegram Hands Over User Data to German Police</a></td>
+        <td>Youtube Video pojednávající o stavu telegramu</td>
+    </tr>
+    </tbody>
+</table>
+<h2>Zdroje použité k vytváření stránky</h2>
+<ul>
+    <li><a href="https://bulma.io/">Bulma</a></li>
+    <li><a href="https://animista.net">Animista</a></li>
+    <li><a href="https://www.eggradients.com/gradient/visible-village">Visible Village Gradient</a></li>
+    <li><a href="https://chatgpt.com">ChatGPT</a></li>
+    <li><a href="https://icons8.com">Icons8</a></li>
+</ul>
+</div>
+    <div class="content player">
+        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+            <iframe style="position: absolute; top:0; left: 0" width="100%" height="100%" src="https://www.youtube.com/embed/t7HZrpJ4OyQ?si=spzKsd_qyNgVX35m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+<script>
+    window.onload = function(){
+        var anchors = document.getElementsByTagName("a");
+        for (var i = 0; i < anchors.length; i++) {
+            if (!anchors[i].hasAttribute('target')) {
+                anchors[i].setAttribute('target', '_blank');
+            }
+        }
+    }
+</script>
+</body>
+</html>

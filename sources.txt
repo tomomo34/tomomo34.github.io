@@ -7,6 +7,9 @@
 /7 citace https://www.rascasone.com/cs/blog/co-je-javascript-pro-zacatecniky
 /8 citace infa https://radixweb.com/blog/top-javascript-usage-statistics#Usage
 /9 https://www.nytimes.com/2023/05/22/business/meta-facebook-eu-privacy-fine.html
+/10 https://signal.org/bigbrother/
+/11 https://youtu.be/t7HZrpJ4OyQ?si=NPtIY3_GZbnLkdOs
+
 
 https://bulma.io/
 https://animista.net
